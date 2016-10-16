@@ -9,10 +9,12 @@
 {% set script_files = script_files + [
         '_static/stacktable.min.js',
         '_static/headers.js',
+        '_static/dropdown.js',
         '_static/jquery.sticky-kit.min.js'
 ] %}
 {% set css_files = [
       '_static/sphinx_design.css',
+      '_static/dropdown.css'
 ] + css_files %}
 
 {% set main_page = title in ["Documentation", "Документация"] %}
@@ -38,8 +40,8 @@
       {% else         %}
         class="b-section-title b-ellipsis toggle-navigation"
       {% endif        %}
-        title="{{ title | cleantitle }}">
-          {{ title | cleantitle }}
+        title="{{ title }}">
+          {{ title }}
       </h2>
       {{- language_selector() -}}
     </div>
